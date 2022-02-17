@@ -1,36 +1,121 @@
 @import 'config';
+@import 'utilities';
+
 
 //General Styles
-*
+* 
 {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
-body
+body 
 {
-    font-family: 'Oswald', sans-serif;
-    line-height: 1.6;
-    background: #fff;
+  font-family: "Oswald", sans-serif;
+  line-height: 1.6;
+  background: #fff;
 }
 
-a
+a 
 {
-    text-decoration: none;
-    color: $dark-color;
+  text-decoration: none;
+  color: $dark-color;
 }
 
-ul
+ul 
 {
-    list-style: none;
+  list-style: none;
 }
 
-h2,h3,h4 
+h2,
+h3,
+h4 
 {
-    text-transform: uppercase
+  text-transform: uppercase;
 }
 
-img
+img 
 {
-    width: 100%;
+  width: 100%;
+}
+
+
+// Logo
+#logo
+{
+    width: 70px;
+    height: 70px;
+    color: #fff;               // in case if it's not 
+    text-transform: uppercase;    //   an image
+}
+
+// Main-Nav
+#main-nav
+{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1rem;
+
+    ul 
+    {
+        display: flex;
+    }
+
+    li 
+    {
+        padding: 1rem 1.5rem;
+    }
+
+    a 
+    {
+        text-decoration: none;
+        color: #fff;
+        text-transform: uppercase;
+        border-bottom: 3px transparent solid; // ?
+        padding-bottom: 0.5rem;
+        transition: border-color 0.5s;
+
+        &:hover 
+        {
+            border-color: $medium-color;
+        }
+
+        &.current 
+        {
+            border-color: $main-color;
+        }
+    }
+}
+
+// Header
+#header
+{
+  //Header-Home
+    &-home
+    {
+        background: $background-image no-repeat center center/cover;
+        height: 100vh;
+        color: #fff;
+
+        // Header Content
+        .header-content 
+        {
+          text-align: center;
+          padding-top: 20%;
+
+          h1 
+          {
+            font-size: 4rem;
+            line-height: 1.2;
+          }
+        }
+
+
+
+    }
+
+    //Header Inner
+
+
+    
 }
